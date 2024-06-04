@@ -1,0 +1,9 @@
+import pandas as pd
+
+# pklファイルを読み込む
+pkl_file_path = 'path_to_your_file.pkl'
+data = pd.read_pickle(pkl_file_path)
+
+# h5ファイルに保存する
+h5_file_path = 'path_to_your_file.h5'
+data.to_hdf(h5_file_path, key='df', mode='w')

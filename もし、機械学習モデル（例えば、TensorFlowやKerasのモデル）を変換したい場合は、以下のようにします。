@@ -1,0 +1,11 @@
+import pickle
+import tensorflow as tf
+
+# pklファイルを読み込む
+pkl_file_path = 'path_to_your_model.pkl'
+with open(pkl_file_path, 'rb') as file:
+    model = pickle.load(file)
+
+# h5ファイルに保存する
+h5_file_path = 'path_to_your_model.h5'
+model.save(h5_file_path)
